@@ -1,0 +1,36 @@
+package lesson1.task2.currency;
+
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class ObjDbCurrencyDaoImpl implements CurrencyDao {
+
+    private static class ObjDbCurrency {
+        final private static ObjDbCurrencyDaoImpl INSTANCE = new ObjDbCurrencyDaoImpl();
+    }
+
+    public static ObjDbCurrencyDaoImpl getInstance() {
+        return ObjDbCurrency.INSTANCE;
+    }
+
+    @Override
+    public int create(Currency currency) {
+        return 0;
+    }
+
+    @Override
+    public Currency read(Long id) {
+        return null;
+    }
+
+    @Override
+    public int update(Currency currency) {
+        return 0;
+    }
+
+    @Override
+    public int delete(Currency currency) {
+        return 0;
+    }
+}
